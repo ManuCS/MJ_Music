@@ -9,13 +9,47 @@ li.nav-item a:hover{
     background-color: #448bc8;
 }
 
-nav{
-    border-radius: 0;
-    border: 0;
+#cabecera{
+    /* z-index:2; */
+    /* position: absolute; */
+    /* background-color: rgba(88, 151, 207, 0.2); */
+    background-color: #262626;
+    color:white;
+    font-family: 'Raleway:700', sans-serif;
+}
+
+nav.navbar{
+    /* background-color: #337ab7; */
+    /* background-color: rgba(51,122,183,.8);  */
+    background-color: rgba(88, 151, 207, 0.8); 
+    /* background-color: #b361fa; */
     margin:0;
+    border:0px;
+    border-radius: 0;  
+    padding:0;
+    position: absolute;
+    z-index: 1;
+    width:100%;
+    border-top: 4px solid paleturquoise;
 }
 
 div.dropdown-menu{
-    width: 1000%;
-    background-color: #448bc8;
+    width: 100%;
+    background-color: rgba(66, 137, 199, 0.8); 
 }
+
+nav ul li{
+    width:17%;
+    text-align: center;
+}
+
+nav ul{
+    width:100%;
+}
+
+.navbar.navbar-1 .navbar-toggler-icon {
+    background-image: url('https://mdbootstrap.com/img/svg/hamburger6.svg?color=000');
+    }
+.navbar.navbar-2 .navbar-toggler-icon {
+    background-image: url('https://mdbootstrap.com/img/svg/hamburger2.svg?color=fff');
+    }

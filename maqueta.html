@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Maqueta</title>
+    <title>MJ Music</title>
     <!-- Fuentes -->
     <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
@@ -20,11 +20,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
+
+
 </head>
 
 
 <body style="font-family: 'Raleway', sans-serif;">
-    <div class="container-fluid" style="background-color: #262626; color:white;font-family: 'Raleway:700', sans-serif;">
+    <div id="cabecera" class="container-fluid">
         <div class="row">
             <div class="col-lg-2" style="font-family: 'Satisfy', cursive;">
                 <h2 style="text-align: center">MJ Music</h2>
@@ -44,49 +48,71 @@
         </div>
     </div>
 
-    <nav class="navbar navbar-expand-lg" style="background-color: #337ab7;margin:0; border:0px; border-radius: 0;">
-        <div class="">
-            <ul class="navbar-nav">
-                <!-- Cuerda -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false" href="#">Cuerda</a>
-                    <!-- Subcategorías -->
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Guitarras</a>
-                        <a class="dropdown-item" href="#">Arcos</a>
-                        <a class="dropdown-item" href="#">Bajos</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Otros</a>
-                    </div>
-                </li>
-                <!-- Viento -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Viento</a>
-                    <!-- Subcategorías -->
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Guitarras</a>
-                        <a class="dropdown-item" href="#">Arcos</a>
-                        <a class="dropdown-item" href="#">Bajos</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Otros</a>
-                    </div>
-                </li>
-                <!-- Percusión -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Percusión</a>
-                    <!-- Subcategorías -->
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Baterías</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Otros</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </nav>
+
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <nav class="navbar navbar-expand-lg navbar-1">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+    
+            <div class="collapse navbar-collapse" id="navbar SupportedContent">
+                <ul class="navbar-nav">
+    
+                    <!-- Cuerda -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false" href="#">Cuerda</a>
+                        <!-- Subcategorías -->
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Guitarras</a>
+                            <a class="dropdown-item" href="#">Arcos</a>
+                            <a class="dropdown-item" href="#">Bajos</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Otros</a>
+                        </div>
+                    </li>
+                    <!-- Viento -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Viento</a>
+                        <!-- Subcategorías -->
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Guitarras</a>
+                            <a class="dropdown-item" href="#">Arcos</a>
+                            <a class="dropdown-item" href="#">Bajos</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Otros</a>
+                        </div>
+                    </li>
+                    <!-- Percusión -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Percusión</a>
+                        <!-- Subcategorías -->
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Baterías</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Otros</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="link" href="#">Grabación</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="link" href="#">Iluminación</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="link" href="#">Partituras y métodos</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
 
     <!--------------------------- Galeria de ofertas ------------------------------------->
 
@@ -126,7 +152,8 @@
 
     <p style="margin: 50em"></p>
 
-    <!-- Footer -->
+
+    <!------------------------------------ Footer ---------------------------------------->
     <footer class="page-footer" style="background-color:#262626; color:white; font-family: 'Raleway', sans-serif;">
         <!-- Footer Links -->
         <div class="container text-center text-md-left">
@@ -224,12 +251,12 @@
 
         <!-- Copyright -->
         <div class="footer-copyright text-center py-3">© 2018 Copyright:
-            <a href="#"> JM Music</a>
+            <a href="#">MJ Music</a>
         </div>
 
 
     </footer>
-    <!-- Footer -->
+
 
 
 </body>

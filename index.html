@@ -10,145 +10,107 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/estilos.css">
-
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Carousel -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> -->
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <!-- Iconos -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
 </head>
 
 
 
 <body style="font-family: 'Raleway', sans-serif;">
-    <div id="cabecera" class="container-fluid">
-        <div class="row">
-            <div class="col-lg-2" style="font-family: 'Satisfy', cursive;">
-                <h2 style="text-align: center">MJ Music</h2>
+
+    <!-- MENÚ PRINCIPAL -->
+    <div id="cabecera" class="container-fluid" style="height: 3.5em;">
+        <div class="row" style="height: 100%;">
+            <!-- Logo -->
+            <div class="col-lg-4 col-5" style="padding:0; margin:auto">
+                <img src="Images/logo.png" alt=""  class="logo">
             </div>
-            <div class="col-lg-7">
-                <h2 style="text-align: center">Búsqueda</h2>
+            <!-- Buscar -->
+            <div class="col-lg-6 col-3" id="divForm" style="padding:0">
+                <form class="form-inline" id="form" action="#" autocomplete="off">
+                    <input class="form-control" id="texto" type="text" placeholder="Buscar">
+                </form>
             </div>
-            <div class="col-lg-1">
-                <h2 style="text-align: center;">User</h2>
-            </div>
-            <div class="col-lg-1">
-                <h2 style="text-align: center">Cesta</h2>
-            </div>
-            <div class="col-lg-1">
-                <h2 style="text-align: center">Chat</h2>
+            <!-- Iconos -->
+            <div class="col-lg-2 col-4" style="padding:0">
+                <div style="height: 100%; width: 100%;">
+                    <button id="chat"><i class="far fa-comments fa-lg mr-lg-2"></i></button>
+                    <button id="cesta"><i class="fas fa-shopping-cart fa-lg mr-lg-2"></i></button>
+                    <button id="user"><i class="fas fa-user fa-lg mr-lg-2"></i></button>
+                </div>
             </div>
         </div>
     </div>
 
 
     <!-- MENÚ DE NAVEGACIÓN -->
-    <nav class="navbar navbar-expand-lg navbar-1">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-        </div>
+    <nav class="navbar navbar-expand-sm">
 
-        <div class="collapse navbar-collapse" id="navbar SupportedContent">
-            <ul class="navbar-nav">
-
-                <!-- Cuerda -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false" href="#">Cuerda</a>
-                    <!-- Subcategorías -->
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Guitarras</a>
-                        <a class="dropdown-item" href="#">Arcos</a>
-                        <a class="dropdown-item" href="#">Bajos</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Otros</a>
-                    </div>
-                </li>
-                <!-- Viento -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Viento</a>
-                    <!-- Subcategorías -->
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Guitarras</a>
-                        <a class="dropdown-item" href="#">Arcos</a>
-                        <a class="dropdown-item" href="#">Bajos</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Otros</a>
-                    </div>
-                </li>
-                <!-- Percusión -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Percusión</a>
-                    <!-- Subcategorías -->
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Baterías</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Otros</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="link" href="#">Grabación</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="link" href="#">Iluminación</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="link" href="#">Partituras y métodos</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+        <!-- Links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Cuerda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Viento</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Percusión</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Grabación</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Iluminación</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Partituras y métodos</a>
+          </li>
+          
+          
+        </ul>
+      
+      </nav>
 
 
-    <!--------------------------- Galeria de ofertas ------------------------------------->
-
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- GALERÍA -->
+    <div id="destacados" class="carousel slide" data-ride="carousel">
         <!-- Indicators -->
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-        </ol>
+        <ul class="carousel-indicators">
+            <li data-target="#destacados" data-slide-to="0" class="active"></li>
+            <li data-target="#destacados" data-slide-to="1"></li>
+            <li data-target="#destacados" data-slide-to="2"></li>
+        </ul>
 
-        <!-- Wrapper for slides -->
+        <!-- Wrapper for slides / Slideshow -->
         <div class="carousel-inner">
-            <div class="item active">
-
-                <img src="Images/img2.jpg" alt="Los Angeles" style="width: 100%; margin:auto; height: 400px;">
+            <div class="carousel-item active">
+                <img src="Images/img2.jpg" alt="">
             </div>
 
-            <div class="item">
-                <img src="Images/img1.jpg" alt="Chicago" style="height:400px; margin:auto;">
+            <div class="carousel-item">
+                <img src="Images/img1.jpg" alt="">
             </div>
 
-            <div class="item">
-                <img src="Images/img3.jpg" alt="New york" style="width: 100%; margin:auto; height: 400px;">
+            <div class="carousel-item">
+                <img src="Images/img3.jpg" alt="">
             </div>
         </div>
 
         <!-- Left and right controls -->
-        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-            <span class="sr-only">Previous</span>
+        <a class="carousel-control-prev" href="#destacados" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <!-- <span class="sr-only">Previous</span> -->
         </a>
-        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-            <span class="sr-only">Next</span>
+        <a class="carousel-control-next" href="#destacados" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <!-- <span class="sr-only">Next</span> -->
         </a>
     </div>
 

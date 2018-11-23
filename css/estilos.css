@@ -1,31 +1,78 @@
-li.nav-item a{ 
-    color:black;
-    font-weight: bold;
-    margin:auto;
-}
-
-li.nav-item a:hover{
-    color: white;
-    background-color: #448bc8;
-}
-
+/* MENÚ PRINCIPAL */
 #cabecera{
-    /* z-index:2; */
-    /* position: absolute; */
-    /* background-color: rgba(88, 151, 207, 0.2); */
     background-color: #262626;
     color:white;
     font-family: 'Raleway:700', sans-serif;
 }
 
+/* Logo */
+.logo{
+    display:block;
+    float: left;
+    padding-left:4px;
+    color:red;
+}
+
+.logo:hover{
+    color: black;
+}
+
+/* Búsqueda */
+#divForm form{
+    /* margin: auto; */
+    width: 90%;
+    height: 100%;
+    float: right;
+}
+
+#divForm form input[type="text"]{
+    width: 70%;
+}
+
+input[type="text"]:focus{
+    border-color: paleturquoise;
+    box-shadow: paleturquoise;
+}
+
+
+/* Botones menú principal */
+
+/* User, cesta y chat */
+#user, #cesta, #chat{
+    background-color: transparent; 
+    border:0;
+    cursor: pointer;
+    height: 100%;
+    color: white;
+    width: 30%;
+    float: right;
+    padding:0;
+}
+
+#user:hover, #cesta:hover, #chat:hover{
+    background-color: paleturquoise;
+    color:black;
+}
+
+#user:focus, #cesta:focus, #chat:focus{
+    outline: 0px;
+}
+
+/* CATEGORÍAS */
+
+/* Divido las categorías horizontalmente */
+nav.navbar ul li{
+    width:17%;
+    text-align: center;
+}
+/* Hago que las categorías ocupen el 100% del ancho de la pag */
+nav.navbar ul{
+    width:100%;
+}
+
+/* Pongo posición absoluta para que aparezca por encima de galería */
 nav.navbar{
-    /* background-color: #337ab7; */
-    /* background-color: rgba(51,122,183,.8);  */
-    background-color: rgba(88, 151, 207, 0.8); 
-    /* background-color: #b361fa; */
-    margin:0;
-    border:0px;
-    border-radius: 0;  
+    background-color: rgba(38,38,38,.8); 
     padding:0;
     position: absolute;
     z-index: 1;
@@ -33,23 +80,59 @@ nav.navbar{
     border-top: 4px solid paleturquoise;
 }
 
+/* Categorías normales */
+li.nav-item a.nav-link{
+    color:white;
+    margin:auto;
+}
+
+li.nav-item:hover a.nav-link{
+    color:paleturquoise;
+    background-color: rgba(38,38,38, 0.5);
+}
+
+/* Subcategorías */
+/* li.nav-item a{ 
+    color:black;
+    font-weight: bold;
+    margin:auto;
+} */
+
+
+
 div.dropdown-menu{
     width: 100%;
-    background-color: rgba(66, 137, 199, 0.8); 
+    /* background-color: rgba(66, 137, 199, 0.8);  */
+    background-color: rgba(175, 238, 238,0.8);
 }
 
-nav ul li{
-    width:17%;
-    text-align: center;
+li.nav-item a.nav-link.dropdown{
+    color:white;
+    font-weight: bold;
+    margin:auto;
 }
 
-nav ul{
-    width:100%;
+li.nav-item a.nav-link.dropdown:hover{
+    color: paleturquoise;
+    /* color:#337ab7; */
+    /* background-color:  rgba(88, 151, 207, 0.8); */
+    background-color: rgba(38,38,38, 0.5);
 }
 
-.navbar.navbar-1 .navbar-toggler-icon {
-    background-image: url('https://mdbootstrap.com/img/svg/hamburger6.svg?color=000');
-    }
-.navbar.navbar-2 .navbar-toggler-icon {
-    background-image: url('https://mdbootstrap.com/img/svg/hamburger2.svg?color=fff');
-    }
+li.nav-item a.nav-link.dropdown:focus{
+    /* color: white; */
+    /* background-color:  rgba(88, 151, 207, 0.8); */
+    /* color:#337ab7; */
+    color:paleturquoise;
+    background-color: rgba(38,38,38, 0.5);
+}
+
+
+
+
+/* GALERIA CAROUSEL */
+.carousel-item img{
+    width: 100%;
+    margin:auto; 
+    height: 400px;
+}

@@ -45,7 +45,7 @@
         <div class="row" style="height: 100%;">
             <!-- Logo -->
             <div class="col-lg-4 col-md-4 col-sm-4 col-4" style="padding:0; margin:auto">
-                <a href="#"><img src="Images/logo.png" alt="" class="logo"></a>
+                <a href="index.html"><img src="Images/logo.png" alt="" class="logo"></a>
             </div>
             <!-- Buscar -->
             <div class="col-lg-6 col-md-6 col-sm-6 col-4" id="divForm" style="padding:0; margin:auto">
@@ -63,12 +63,12 @@
             </div>
             <!-- Iconos -->
             <div class="col-lg-2 col-md-2 col-sm-2 col-4" style="padding:0">
-                    <div style="height: 100%; width: 100%;">
-                        <button id="user"><a href="autenticacion.html"><i class="fas fa-user fa-lg mr-lg-2"></i></a></button>
-                        <button id="cesta"><a href="#"><i class="fas fa-shopping-cart fa-lg mr-lg-2"></i></a></button>
-                        <button id="chat"><a href="#"><i class="far fa-comments fa-lg mr-lg-2"></i></a></button>
-                    </div>
+                <div style="height: 100%; width: 100%;">
+                    <button id="user"><a href="autenticacion.html"><i class="fas fa-user fa-lg mr-lg-2"></i></a></button>
+                    <button id="cesta"><a href="#"><i class="fas fa-shopping-cart fa-lg mr-lg-2"></i></a></button>
+                    <button id="chat"><a href="#"><i class="far fa-comments fa-lg mr-lg-2"></i></a></button>
                 </div>
+            </div>
         </div>
     </div>
 
@@ -128,113 +128,61 @@
 
     </nav>
 
-    <!-- GALERÍA -->
-    <div id="destacados" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
-        <ul class="carousel-indicators">
-            <li data-target="#destacados" data-slide-to="0" class="active"></li>
-            <li data-target="#destacados" data-slide-to="1"></li>
-            <li data-target="#destacados" data-slide-to="2"></li>
-        </ul>
+    <!-- FORMULARIO -->
 
-        <!-- Wrapper for slides / Slideshow -->
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="Images/img2.jpg" alt="">
+    <div class="container" style="clear:both; margin-top:3em; ">
+        <form method="post" action="#" style="margin:auto">
+
+            <h1 style="text-align: center">Segunda mano</h1>
+
+            <div class="form-group">
+                <label>Marca <input type="text" name="marca" class="form-control" required></label>
             </div>
 
-            <div class="carousel-item">
-                <img src="Images/img1.jpg" alt="">
+            <div class="form-group">
+                <label>Modelo <input type="text" class="form-control" name="nombre" id="nombre" required></label>
+
+
             </div>
 
-            <div class="carousel-item">
-                <img src="Images/img3.jpg" alt="">
+            <div class="form-group">
+                <label>Descripción <textarea cols="40" rows="5" name="descripcion" class="form-control" min="20"
+                        maxlength="150" required></textarea></label>
             </div>
-        </div>
 
-        <!-- Left and right controls -->
-        <a class="carousel-control-prev" href="#destacados" data-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#destacados" data-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </a>
+            <div class="form-group">
+                <label>Categoría
+                    <select name="precio_venta" class="form-control" required>
+                        <option value="-1">Seleccione</option>
+                        <option value="cuerda">Cuerda</option>
+                        <option value="viento">Viento</option>
+                        <option value="percusion">Percusión</option>
+                        <option value="grabacion">Grabación</option>
+                        <option value="iluminacion">Iluminación</option>
+                        <option value="partymet">Partituras y métodos</option>
+                    </select></label>
+
+
+            </div>
+
+            <div class="form-group">
+                <label>Precio de venta <input type="number" name="precio_venta" class="form-control" min="1" step="any"
+                        required></label>
+            </div>
+
+            <div class="form-group">
+                <label>Imágenes: <input type="file" name="images" multiple="multiple" accept="image/*" capture="camera&quot;"
+                        required></label>
+
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Subir" class="btn btn-info">
+            </div>
+
+        </form>
+
     </div>
-
-
-    <!-- PRODUCTOS POPULARES -->
-    <section id="populares">
-        <h3>Productos más populares</h3>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-4">
-                    <img class="img-fluid" src="Images/populares/populares1.png" alt="Gretsch White Falcon" id="popular1">
-                    <div class="overlay">
-                        <div>Gretsch G6136T-59 White Falcon</div>
-                    </div>
-                    <img src="Images/marcas/gretsch.png" class="logoPop" alt="Gretsch">
-                    <span class="precio">3.450€</span>
-                    <button class="btn"><a href="producto.html">Comprar</a></button>
-                </div>
-                <div class="col-4">
-                    <img class="img-fluid" src="Images/populares/populares2.png" alt="Yamaha GC1-M" id="popular2">
-                    <div class="overlay">
-                        <div>Yamaha GC1-M PE Grand Piano</div>
-                    </div>
-                    <img src="Images/marcas/yamaha.png" class="logoPop" alt="">
-                    <span class="precio">16.222€</span>
-                    <button class="btn">Comprar</button>
-                </div>
-                <div class="col-4">
-                    <img class="img-fluid" src="Images/populares/populares3.jpg" alt="DW PDP CM6" id="popular3">
-                    <div class="overlay">
-                        <div>DW PDP CM6 Fusion Silver / Black</div>
-                    </div>
-                    <img src="Images/marcas/DrumsW.png" class="logoPop" alt="">
-                    <span class="precio">1.445,00€</span>
-                    <button class="btn">Comprar</button>
-                </div>
-            </div>
-        </div>
-    </section>
-    <hr style="background-color: paleturquoise;">
-
-    <!-- SEGUNDA MANO -->
-    <section id="populares">
-        <h3>Productos de segunda mano <span class="enlace">¿Quieres vender? Entra <a href="FormProdUsado.html">aqui</a></span></h3>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-4">
-                    <img class="img-fluid" src="Images/populares/populares1.png" alt="Gretsch White Falcon" id="popular1">
-                    <div class="overlay">
-                        <div>Gretsch G6136T-59 White Falcon</div>
-                    </div>
-                    <img src="Images/marcas/gretsch.png" class="logoPop" alt="Gretsch">
-                    <span class="precio">2.450€</span>
-                    <button class="btn">Comprar</button>
-                </div>
-                <div class="col-4">
-                    <img class="img-fluid" src="Images/populares/populares2.png" alt="Yamaha GC1-M" id="popular2">
-                    <div class="overlay">
-                        <div>Yamaha GC1-M PE Grand Piano</div>
-                    </div>
-                    <img src="Images/marcas/yamaha.png" class="logoPop" alt="">
-                    <span class="precio">14.222€</span>
-                    <button class="btn">Comprar</button>
-                </div>
-                <div class="col-4">
-                    <img class="img-fluid" src="Images/populares/populares3.jpg" alt="DW PDP CM6" id="popular3">
-                    <div class="overlay">
-                        <div>DW PDP CM6 Fusion Silver / Black</div>
-                    </div>
-                    <img src="Images/marcas/DrumsW.png" class="logoPop" alt="">
-                    <span class="precio">1.103,00€</span>
-                    <button class="btn">Comprar</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    <p></p>
 
     <!------------------------------------ Footer ---------------------------------------->
     <footer class="page-footer" style="background-color:#262626; color:white; font-family: 'Raleway', sans-serif;">

@@ -7,26 +7,34 @@
 
 /* Logo */
 .logo{
-    display:block;
-    float: left;
     padding-left:4px;
-    color:red;
+    filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+    transition:filter 1s;
+    -webkit-transition:-webkit-filter 1s;
 }
 
 .logo:hover{
-    color: black;
+    filter: brightness(70%);
+}
+
+.logo:active{
+    filter: saturate(200%);
+    -webkit-filter: saturate(200%);
 }
 
 /* Búsqueda */
 #divForm form{
     /* margin: auto; */
-    width: 90%;
+    width: 60%;
     height: 100%;
-    float: right;
+    margin-left: 40px;
+    /* float: right; */
+
 }
 
 #divForm form input[type="text"]{
-    width: 70%;
+    width: 100%;
 }
 
 input[type="text"]:focus{
@@ -39,14 +47,17 @@ input[type="text"]:focus{
 
 /* User, cesta y chat */
 #user, #cesta, #chat{
-    background-color: transparent; 
+    background-color: transparent;
     border:0;
     cursor: pointer;
     height: 100%;
     color: white;
     width: 30%;
-    float: right;
     padding:0;
+}
+
+#user a, #cesta a, #chat a{
+    color:white;
 }
 
 #user:hover, #cesta:hover, #chat:hover{
@@ -60,6 +71,36 @@ input[type="text"]:focus{
 
 /* CATEGORÍAS */
 
+/* Menún hamburguesa*/
+
+.hamburguer {
+    cursor: pointer;
+    width: 28px;
+    margin:auto;
+    float:left;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: paleturquoise;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+
 /* Divido las categorías horizontalmente */
 nav.navbar ul li{
     width:17%;
@@ -72,12 +113,14 @@ nav.navbar ul{
 
 /* Pongo posición absoluta para que aparezca por encima de galería */
 nav.navbar{
-    background-color: rgba(38,38,38,.8); 
+    /* visibility: hidden; */
+    background-color: rgba(38,38,38,.8);
     padding:0;
     position: absolute;
     z-index: 1;
     width:100%;
     border-top: 4px solid paleturquoise;
+    /* overflow:auto; */
 }
 
 /* Categorías normales */
@@ -88,51 +131,460 @@ li.nav-item a.nav-link{
 
 li.nav-item:hover a.nav-link{
     color:paleturquoise;
-    background-color: rgba(38,38,38, 0.5);
-}
-
-/* Subcategorías */
-/* li.nav-item a{ 
-    color:black;
     font-weight: bold;
-    margin:auto;
-} */
-
-
-
-div.dropdown-menu{
-    width: 100%;
-    /* background-color: rgba(66, 137, 199, 0.8);  */
-    background-color: rgba(175, 238, 238,0.8);
-}
-
-li.nav-item a.nav-link.dropdown{
-    color:white;
-    font-weight: bold;
-    margin:auto;
-}
-
-li.nav-item a.nav-link.dropdown:hover{
-    color: paleturquoise;
-    /* color:#337ab7; */
-    /* background-color:  rgba(88, 151, 207, 0.8); */
     background-color: rgba(38,38,38, 0.5);
 }
 
-li.nav-item a.nav-link.dropdown:focus{
-    /* color: white; */
-    /* background-color:  rgba(88, 151, 207, 0.8); */
-    /* color:#337ab7; */
-    color:paleturquoise;
-    background-color: rgba(38,38,38, 0.5);
+/* Iconito de dropdow */
+.dropdown-toggle::after{
+    margin-left: 1em !important;
 }
-
-
 
 
 /* GALERIA CAROUSEL */
 .carousel-item img{
     width: 100%;
-    margin:auto; 
+    margin:auto;
     height: 400px;
 }
+
+
+
+
+/* MÁS POPULARES */
+#populares h3{
+    margin-bottom: 1.5em;
+}
+#populares{
+    margin: 5em auto;
+    position: relative;
+}
+
+#populares div{
+    margin: auto;
+    text-align: center;
+}
+
+#populares img{
+    width: auto;
+    height: 200px;
+    margin:auto;
+    display:block;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: paleturquoise;
+}
+
+#populares .col-4:hover .overlay {
+    opacity: 1;
+    cursor: pointer;
+}
+
+#populares .overlay div{
+    font-weight: bold;
+    font-size: 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center; 
+    cursor: pointer;
+}
+
+#populares .logoPop{
+    position: absolute;
+    top: 10%;
+    left:20%;
+    width: 30%;
+    cursor: pointer;
+    height: auto;
+    min-width: 85px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    padding: 12px 24px;
+    text-align: center;
+}
+
+#populares span.precio{
+    position: absolute;
+    top: 80%;
+    left: 5%;
+    text-shadow: 1px 1px 1px;
+    cursor: pointer;
+}
+
+#populares span.precio:hover{
+    font-size: 1.2em;
+}
+
+#populares button{
+    position: absolute;
+    top: 90%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #17a2b8;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#populares button:hover{
+    background-color: #13b2ca;
+}
+
+#populares button a{
+    color:white;
+    text-decoration: none;
+}
+
+#populares .enlace{
+    font-size: .5em;
+    color:black;
+    
+}
+
+
+
+/*FOOTER*/
+
+footer a{
+    color:paleturquoise;
+}
+
+footer a:hover{
+    font-weight: bold;
+    color:paleturquoise;
+    text-decoration: none;
+}
+
+footer li{
+    margin-bottom: 1em;
+}
+
+
+
+  /* ------------------------------------------------------------------------------ */
+
+
+  /* FORMULARIO PRODUCTOS USADOS */
+form{
+    align-content: center;
+}
+div.form-group{
+    width: 50%;
+    margin: 0 auto;
+}
+div.form-group label{
+    display:block;
+}
+
+
+/* ------------------------------------------------------------------------------ */
+
+
+
+/* Producto */
+
+.producto{
+    margin: 50px 0;
+}
+
+.producto h1{
+    font-size: 32px;
+    display: inline-block;
+}
+
+.producto .container-fluid{
+    padding:0;
+}
+
+.logoMarca{
+    width: 150px;
+    float: right;
+}
+
+.producto .container img{
+    margin: 10px auto;
+}
+
+.producto .container{
+    position: relative;
+}
+
+.producto .mySlides{
+    display:none;
+    width: 50%;
+    height: 400px;
+    margin:auto;
+    align-items: center;
+}
+
+.producto .mySlides img{
+    min-width: 300px;
+}
+
+.producto .cursor{
+    cursor: pointer;
+}
+
+.producto .prev, .producto .next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.producto .next{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.producto .prev:hover, .producto .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.producto .column{
+    float: left;
+    width: 16.66%;  
+    position: relative;
+}
+
+.producto .demo{
+    opacity: 0.6;
+    vertical-align: middle;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.producto .active, .producto .demo:hover {
+  opacity: 1;
+  border-bottom: 3px solid paleturquoise;
+
+}
+
+/* Zona de boton comprar, envío */
+.compra h2{
+    text-align: center;
+    margin-top: 3em;
+}
+
+.compra button{
+    background-color: #17a2b8;
+    color: white;
+    width: 100%;
+    margin: 2em auto;
+}
+
+.compra button:hover, .autenticacion .btn:hover{
+    background-color: #13b2ca;
+    box-shadow: 5px 5px 5px paleturquoise;
+    font-weight: bold;
+}
+
+.compra aside{
+    width: 100%;
+    height: 200px;
+    background-color: #262626;
+    border-radius: 7%;
+    color: paleturquoise;
+}
+
+.compra aside ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 1em 0;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.compra aside ul li:nth-child(2){
+    font-size: .5em;
+    font-weight: normal;
+    color:white;
+}
+
+.compra aside ul li:nth-child(3){
+    font-weight: normal;
+    font-size: .9em;
+    padding-top: 1em;
+}
+
+.compra aside ul li:nth-last-child(1){
+    font-weight: normal;
+    font-size: .5em;
+    color: white;
+    padding-top: 1em;
+}
+
+
+/* ------------------------------------------------------------------------------ */
+
+.autenticacion{
+    margin: 70px auto;
+}
+
+.autenticacion span{
+    font-size: .8em;
+    text-align: center;
+}
+
+.autenticacion .elige{
+    width: 50%;
+    margin:auto;
+}
+
+.autenticacion .signup, .autenticacion .login{
+    width: 50%;
+    background: #fff;
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #3e3e40;
+    color: paleturquoise;
+}
+
+.autenticacion .signup:hover, .autenticacion .login:hover{
+    font-weight: bold;
+    background-color: #262626;
+}
+
+
+.autenticacion .signup-form, .login-form{
+    padding: 40px;
+    clear: both;
+    width: 50%;
+    box-sizing: border-box;
+    height: 500px;
+    margin:auto;
+    text-align: center;
+}
+
+.signup-form{
+    display:none;
+}
+
+.autenticacion label{
+    width:100%;
+    text-align: left;
+}
+
+.autenticacion input{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+    border: 2px solid #13b2ca;
+    color: #3e3e40;
+    font-size: 14px;
+    outline: none;
+    transform: all 0.5s ease;
+}
+  
+.input:focus{
+    border: 2px solid paleturquoise;
+}
+
+.autenticacion .btn{
+    background-color: #17a2b8;
+    color: white;
+    width: 100%;
+}
+
+.autenticacion span a{
+    text-decoration: none;
+    color: rgb(51, 50, 50);
+}
+
+.autenticacion span a:hover{
+    color: black;
+    text-decoration: underline;
+}
+
+
+
+/* RESPONSIVE MÓVIL */
+
+@media only screen and (max-width: 767px) {
+    .navbar li.nav-item{
+        width:100%;
+      padding-left: 3em;
+    }
+    .navbar li a{
+        width: 100%;
+        text-align: left;
+        /* padding-left: 3em;    */
+    }
+    .navbar{
+        visibility: hidden;
+    }
+
+    #populares .overlay div{
+        font-size: .5em;
+    }
+
+    #populares img{
+        width: auto;
+        height: 100px;
+        margin:auto;
+        display:block;
+    }
+
+    #populares span.precio{
+        top: 100%;
+        left: 25%;
+    }
+
+    #populares span.precio:hover{
+        font-size: 1em;
+    }
+
+    #populares button{
+        left: 50%;
+        top: 140%;
+    }
+
+    .autenticacion .elige{
+        width: 100%;
+        margin:auto;
+    }
+
+    .autenticacion .signup-form, .login-form{
+        padding: 40px;
+        clear: both;
+        width: 100%;
+        box-sizing: border-box;
+        height: 500px;
+        margin:auto;
+        text-align: center;
+    }
+  }

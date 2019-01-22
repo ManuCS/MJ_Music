@@ -1,0 +1,131 @@
+.producto{
+    margin: 50px 0;
+
+    h1{
+        font-size: 32px;
+        display: inline-block;
+    }
+
+    .container-fluid{
+        padding: 0;
+    }
+
+    .container{
+        position: relative;
+        img{
+            margin: 10px auto;
+        }
+    }
+
+    .mySlides{
+        display:none;
+        width: 50%;
+        height: 400px;
+        margin:auto;
+        align-items: center;
+
+        img{
+            min-width: 300px;
+        }
+    }
+
+    .cursor{
+        cursor: pointer;
+    }
+
+    .column{
+        float: left;
+        width: 16.66%;  
+        position: relative;
+    }
+
+    .demo{
+        opacity: 0.6;
+        vertical-align: middle;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .active, .demo:hover{
+        opacity: 1;
+        border-bottom: 3px solid $turquesa;
+    }
+
+}
+
+.logoMarca{
+    width: 150px;
+    float: right;
+}
+
+@mixin botonHover{
+    background-color: $colorBotonHov;
+    box-shadow: 5px 5px 5px $turquesa;
+    font-weight: bold;
+}
+
+
+/* Zona de boton comprar, envío */
+.compra{
+    h2{
+        text-align: center;
+        margin-top: 3em;
+    }
+
+    button{
+        background-color: $colorBoton;
+        color: $blanco;
+        width: 100%;
+        margin: 2em auto;
+
+        &:hover{
+            @include botonHover();
+        }
+    }
+
+    .autenticacion{
+        .btn{
+            &:hover{
+                @include botonHover();
+            }
+        }
+    }
+
+    aside{
+        width: 100%;
+        height: 200px;
+        background-color: $colorFondo;
+        border-radius: 7%;
+        color: $turquesa;
+
+        ul{
+            list-style-type: none;
+            text-align: center;
+            padding: 1em 0;
+            font-weight: bold;
+            font-size: 1.5em;
+
+            li:nth-child(2){
+                font-size: .5em;
+                font-weight: normal;
+                color:$blanco;
+            }
+
+            li:nth-child(3){
+                font-weight: normal;
+                font-size: .9em;
+                padding-top: 1em;
+            }
+            li:nth-last-child(1){
+                font-weight: normal;
+                font-size: .5em;
+                color: $blanco;
+                padding-top: 1em;
+            }
+        }
+    }
+
+}
+

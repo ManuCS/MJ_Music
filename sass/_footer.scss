@@ -1,0 +1,16 @@
+footer{
+    a{
+        color:$turquesa;
+
+        &:hover{
+            font-weight: bold;
+            color:$turquesa;
+            text-decoration: none;
+        }
+    }
+
+    li{
+        margin-bottom: 1em;
+    }
+}
+

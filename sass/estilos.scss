@@ -1,0 +1,119 @@
+@import "variables";
+
+body{
+    font-family: $fuente;
+}
+
+/* MENU PRINCIPAL */
+@import "menuPrincipal";
+
+
+
+/* CATEGORIAS */
+@import "categorias";
+
+/* GALERIA CAROUSEL */
+.carousel-item img{
+    width: 100%;
+    margin:auto;
+    height: 400px;
+}
+
+
+/* MÁS POPULARES */
+@import "populares";
+
+
+  /* ------------------------------------------------------------------------------ */
+
+
+  /* FORMULARIO PRODUCTOS USADOS */
+@import "formUsado";
+
+
+/* ------------------------------------------------------------------------------ */
+
+
+
+/* Producto */
+@import "producto";
+
+
+
+
+/* ------------------------------------------------------------------------------ */
+
+// Autenticacion
+@import "autenticacion";
+
+
+
+/*FOOTER*/
+@import "footer";
+
+
+
+/* RESPONSIVE MÓVIL */
+
+@media only screen and (max-width: 767px) {
+
+    .navbar{
+        visibility: hidden;
+        li.nav-item{
+            width:100%;
+            padding-left: 3em;
+        }
+
+        li{
+            a{
+                width: 100%;
+                text-align: left;
+            }
+        }
+    }
+
+    #populares{
+        .overlay div{
+            font-size: .5em;
+        }
+
+        img{
+            width: auto;
+            height: 100px;
+            margin:auto;
+            display:block;
+        }
+
+        span.precio{
+            top: 100%;
+            left: 25%;
+
+            &:hover{
+                font-size: 1em;
+            }
+        }
+
+        button{
+            left: 50%;
+            top: 140%;
+        }
+    }
+
+
+    .autenticacion{
+        .elige{
+            width: 100%;
+            margin:auto;
+        }
+
+        .signup-form, .login-form{
+            padding: 40px;
+            clear: both;
+            width: 100%;
+            box-sizing: border-box;
+            height: 500px;
+            margin:auto;
+            text-align: center;
+        }
+    }
+}

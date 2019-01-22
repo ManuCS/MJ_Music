@@ -1,0 +1,98 @@
+@mixin signLogin(){
+    width: 50%;
+    background: $blanco;
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #3e3e40;
+    color: $turquesa;
+}
+
+@mixin form{
+    padding: 40px;
+    clear: both;
+    width: 50%;
+    box-sizing: border-box;
+    height: 500px;
+    margin:auto;
+    text-align: center;
+}
+
+.autenticacion{
+    margin: 70px auto;
+    span{
+        font-size: .8em;
+        text-align: center;
+    }
+
+    .elige{
+        width: 50%;
+        margin:auto;
+    }
+
+    .signup, .login{
+        @include signLogin();
+
+        &:hover{
+            font-weight: bold;
+            background-color: #262626;
+        }
+    }
+
+    .signup-form{
+        @include form();
+        display:none;
+    }
+
+    .login-form{
+        @include form();
+    }
+    
+    label{
+        width:100%;
+        text-align: left;
+    }
+
+    input{
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        margin-bottom: 25px;
+        border: 2px solid $colorBotonHov;
+        color: #3e3e40;
+        font-size: 14px;
+        outline: none;
+        transform: all 0.5s ease;
+
+        &:focus{
+            border: 2px solid $turquesa;
+        }
+    }
+
+    .btn{
+        background-color: $colorBoton;
+        color: white;
+        width: 100%;
+
+        &:hover{
+            background-color: $colorBotonHov;
+        }
+    }
+
+    span{
+        a{
+            text-decoration: none;
+            color: rgb(51, 50, 50);
+
+            &:hover{
+                color: black;
+                text-decoration: underline;
+                font-weight: bold;
+            }
+        }
+    }
+}
+

@@ -1,0 +1,67 @@
+#cabecera{
+    background-color: $colorFondo;
+    color: $blanco;
+    font-family: $fuenteNegrita;
+}
+
+/* Logo */
+.logo{
+    padding-left:4px;
+    filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+    transition:filter 1s;
+    -webkit-transition:-webkit-filter 1s;
+
+    &:hover{
+        filter: brightness(70%);
+    }
+    &:active{
+        filter: saturate(200%);
+        -webkit-filter: saturate(200%);
+    }
+}
+
+
+/* Busqueda */
+#divForm form{
+    width: 60%;
+    height: 100%;
+    margin-left: 40px;
+    
+    input[type="text"]{
+        width: 100%;
+        &:focus{
+            border-color: $turquesa;
+            box-shadow: $turquesa;
+        }
+    }
+}
+
+
+/* Botones menu principal */
+
+/* User, cesta y chat */
+#user, #cesta, #chat{
+    background-color: transparent;
+    border:0;
+    cursor: pointer;
+    height: 100%;
+    color: $blanco;
+    width: 30%;
+    padding:0;
+
+    a{
+        color: $blanco;
+    }
+
+    &:hover{
+        background-color: $turquesa;
+        a{
+            color:black;
+        }
+    }
+
+    &:focus{
+        outline: 0px;
+    }
+}

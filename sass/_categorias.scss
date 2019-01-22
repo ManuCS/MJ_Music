@@ -1,0 +1,76 @@
+/* Menu hamburguesa*/
+
+.hamburguer {
+    cursor: pointer;
+    width: 28px;
+    margin:auto;
+    float:left;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: $turquesa;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+.change{
+    .bar1{
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+    }
+    .bar2{
+        opacity: 0;
+    }
+    .bar3{
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);    
+    }
+}
+
+
+/* Pongo posicion absoluta para que aparezca por encima de galeria */
+nav.navbar{
+    background-color: rgba(38,38,38,.8);
+    padding:0;
+    position: absolute;
+    z-index: 1;
+    width:100%;
+    border-top: 4px solid $turquesa;
+    
+    /* Hago que las categorias ocupen el 100% del ancho de la pag*/
+    ul{
+        width: 100%;
+
+        /* Divido las categorias horizontalmente */
+        li{
+            width:17%;
+            text-align: center;
+            
+            /* Categorias normales */
+            a.nav-link{
+                color:white;
+                margin:auto;
+            }
+
+            &:hover a.nav-link{
+                color:paleturquoise;
+                font-weight: bold;
+                background-color: rgba(38,38,38, 0.5);
+            }
+
+            /* Iconito de dropdow */
+            .dropdown-toggle::after{
+                margin-left: 1em !important;
+            }
+
+        }
+    }
+}
+
+
+
+
+
+
+

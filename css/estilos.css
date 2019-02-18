@@ -1,406 +1,63 @@
-@charset "UTF-8";
-body {
-  font-family: "Raleway", sans-serif; }
+/*
+Error: File to import not found or unreadable: video.
+       Load path: G:/DAW2/DIW/Proyecto/MJ_Music/sass
+        on line 5 of sass/estilos.scss
 
-/* MENU PRINCIPAL */
-#cabecera {
-  background-color: #262626;
-  color: white;
-  font-family: "Raleway:700", sans-serif; }
+1: @import "variables";
+2: 
+3: 
+4: // Index
+5: @import "video";
+6: 
+7: @import "audio";
+8: 
+9: body{
+10:     font-family: $fuente;
 
-/* Logo */
-.logo {
-  padding-left: 4px;
-  filter: grayscale(0);
-  -webkit-filter: grayscale(0);
-  transition: filter 1s;
-  -webkit-transition: -webkit-filter 1s; }
-  .logo:hover {
-    filter: brightness(70%); }
-  .logo:active {
-    filter: saturate(200%);
-    -webkit-filter: saturate(200%); }
-
-/* Busqueda */
-#divForm form {
-  width: 60%;
-  height: 100%;
-  margin-left: 40px; }
-  #divForm form input[type="text"] {
-    width: 100%; }
-    #divForm form input[type="text"]:focus {
-      border-color: paleturquoise;
-      box-shadow: paleturquoise; }
-
-/* Botones menu principal */
-/* User, cesta y chat */
-#user, #cesta, #chat {
-  background-color: transparent;
-  border: 0;
-  cursor: pointer;
-  height: 100%;
-  color: white;
-  width: 30%;
-  padding: 0; }
-  #user a, #cesta a, #chat a {
-    color: white; }
-  #user:hover, #cesta:hover, #chat:hover {
-    background-color: paleturquoise; }
-    #user:hover a, #cesta:hover a, #chat:hover a {
-      color: black; }
-  #user:focus, #cesta:focus, #chat:focus {
-    outline: 0px; }
-
-/* CATEGORIAS */
-/* Menu hamburguesa*/
-.hamburguer {
-  cursor: pointer;
-  width: 28px;
-  margin: auto;
-  float: left; }
-
-.bar1, .bar2, .bar3 {
-  width: 35px;
-  height: 5px;
-  background-color: paleturquoise;
-  margin: 6px 0;
-  transition: 0.4s; }
-
-.change .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-  transform: rotate(-45deg) translate(-9px, 6px); }
-.change .bar2 {
-  opacity: 0; }
-.change .bar3 {
-  -webkit-transform: rotate(45deg) translate(-8px, -8px);
-  transform: rotate(45deg) translate(-8px, -8px); }
-
-/* Pongo posicion absoluta para que aparezca por encima de galeria */
-nav.navbar {
-  background-color: rgba(38, 38, 38, 0.8);
-  padding: 0;
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  border-top: 4px solid paleturquoise;
-  /* Hago que las categorias ocupen el 100% del ancho de la pag*/ }
-  nav.navbar ul {
-    width: 100%;
-    /* Divido las categorias horizontalmente */ }
-    nav.navbar ul li {
-      width: 17%;
-      text-align: center;
-      /* Categorias normales */
-      /* Iconito de dropdow */ }
-      nav.navbar ul li a.nav-link {
-        color: white;
-        margin: auto; }
-      nav.navbar ul li:hover a.nav-link {
-        color: paleturquoise;
-        font-weight: bold;
-        background-color: rgba(38, 38, 38, 0.5); }
-      nav.navbar ul li .dropdown-toggle::after {
-        margin-left: 1em !important; }
-
-/* GALERIA CAROUSEL */
-.carousel-item img {
-  width: 100%;
-  margin: auto;
-  height: 400px; }
-
-/* M├üS POPULARES */
-#populares {
-  margin: 5em auto;
-  position: relative; }
-  #populares h3 {
-    margin-bottom: 1.5em; }
-  #populares div {
-    margin: auto;
-    text-align: center; }
-  #populares img {
-    width: auto;
-    height: 200px;
-    margin: auto;
-    display: block; }
-  #populares .overlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: paleturquoise; }
-  #populares .col-4:hover .overlay {
-    opacity: 1;
-    cursor: pointer; }
-  #populares .overlay div {
-    font-weight: bold;
-    font-size: 1em;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-    cursor: pointer; }
-  #populares .logoPop {
-    position: absolute;
-    top: 10%;
-    left: 20%;
-    width: 30%;
-    cursor: pointer;
-    height: auto;
-    min-width: 85px;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    padding: 12px 24px;
-    text-align: center; }
-  #populares span.precio {
-    position: absolute;
-    top: 80%;
-    left: 5%;
-    text-shadow: 1px 1px 1px;
-    cursor: pointer; }
-    #populares span.precio:hover {
-      font-size: 1.2em; }
-  #populares button {
-    position: absolute;
-    top: 90%;
-    left: 85%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    background-color: #17a2b8;
-    color: white;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    text-align: center; }
-    #populares button:hover {
-      background-color: #13b2ca; }
-    #populares button a {
-      color: white;
-      text-decoration: none; }
-  #populares .enlace {
-    font-size: .5em;
-    color: black; }
-
-/* ------------------------------------------------------------------------------ */
-/* FORMULARIO PRODUCTOS USADOS */
-form {
-  align-content: center; }
-
-div.form-group {
-  width: 50%;
-  margin: 0 auto; }
-  div.form-group label {
-    display: block; }
-
-/* ------------------------------------------------------------------------------ */
-/* Producto */
-.producto {
-  margin: 50px 0; }
-  .producto h1 {
-    font-size: 32px;
-    display: inline-block; }
-  .producto .container-fluid {
-    padding: 0; }
-  .producto .container {
-    position: relative; }
-    .producto .container img {
-      margin: 10px auto; }
-  .producto .mySlides {
-    display: none;
-    width: 50%;
-    height: 400px;
-    margin: auto;
-    align-items: center; }
-    .producto .mySlides img {
-      min-width: 300px; }
-  .producto .cursor {
-    cursor: pointer; }
-  .producto .column {
-    float: left;
-    width: 16.66%;
-    position: relative; }
-  .producto .demo {
-    opacity: 0.6;
-    vertical-align: middle;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%); }
-  .producto .active, .producto .demo:hover {
-    opacity: 1;
-    border-bottom: 3px solid paleturquoise; }
-
-.logoMarca {
-  width: 150px;
-  float: right; }
-
-/* Zona de boton comprar, env├¡o */
-.compra h2 {
-  text-align: center;
-  margin-top: 3em; }
-.compra button {
-  background-color: #17a2b8;
-  color: white;
-  width: 100%;
-  margin: 2em auto; }
-  .compra button:hover {
-    background-color: #13b2ca;
-    box-shadow: 5px 5px 5px paleturquoise;
-    font-weight: bold; }
-.compra .autenticacion .btn:hover {
-  background-color: #13b2ca;
-  box-shadow: 5px 5px 5px paleturquoise;
-  font-weight: bold; }
-.compra aside {
-  width: 100%;
-  height: 200px;
-  background-color: #262626;
-  border-radius: 7%;
-  color: paleturquoise; }
-  .compra aside ul {
-    list-style-type: none;
-    text-align: center;
-    padding: 1em 0;
-    font-weight: bold;
-    font-size: 1.5em; }
-    .compra aside ul li:nth-child(2) {
-      font-size: .5em;
-      font-weight: normal;
-      color: white; }
-    .compra aside ul li:nth-child(3) {
-      font-weight: normal;
-      font-size: .9em;
-      padding-top: 1em; }
-    .compra aside ul li:nth-last-child(1) {
-      font-weight: normal;
-      font-size: .5em;
-      color: white;
-      padding-top: 1em; }
-
-/* ------------------------------------------------------------------------------ */
-.autenticacion {
-  margin: 70px auto; }
-  .autenticacion span {
-    font-size: .8em;
-    text-align: center; }
-  .autenticacion .elige {
-    width: 50%;
-    margin: auto; }
-  .autenticacion .signup, .autenticacion .login {
-    width: 50%;
-    background: white;
-    float: left;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    cursor: pointer;
-    text-transform: uppercase;
-    background-color: #3e3e40;
-    color: paleturquoise; }
-    .autenticacion .signup:hover, .autenticacion .login:hover {
-      font-weight: bold;
-      background-color: #262626; }
-  .autenticacion .signup-form {
-    padding: 40px;
-    clear: both;
-    width: 50%;
-    box-sizing: border-box;
-    height: 500px;
-    margin: auto;
-    text-align: center;
-    display: none; }
-  .autenticacion .login-form {
-    padding: 40px;
-    clear: both;
-    width: 50%;
-    box-sizing: border-box;
-    height: 500px;
-    margin: auto;
-    text-align: center; }
-  .autenticacion label {
-    width: 100%;
-    text-align: left; }
-  .autenticacion input {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    margin-bottom: 25px;
-    border: 2px solid #13b2ca;
-    color: #3e3e40;
-    font-size: 14px;
-    outline: none;
-    transform: all 0.5s ease; }
-    .autenticacion input:focus {
-      border: 2px solid paleturquoise; }
-  .autenticacion .btn {
-    background-color: #17a2b8;
-    color: white;
-    width: 100%; }
-    .autenticacion .btn:hover {
-      background-color: #13b2ca; }
-  .autenticacion span a {
-    text-decoration: none;
-    color: #333232; }
-    .autenticacion span a:hover {
-      color: black;
-      text-decoration: underline;
-      font-weight: bold; }
-
-/*FOOTER*/
-footer a {
-  color: paleturquoise; }
-  footer a:hover {
-    font-weight: bold;
-    color: paleturquoise;
-    text-decoration: none; }
-footer li {
-  margin-bottom: 1em; }
-
-/* RESPONSIVE M├ôVIL */
-@media only screen and (max-width: 767px) {
-  .navbar {
-    visibility: hidden; }
-    .navbar li.nav-item {
-      width: 100%;
-      padding-left: 3em; }
-    .navbar li a {
-      width: 100%;
-      text-align: left; }
-
-  #populares .overlay div {
-    font-size: .5em; }
-  #populares img {
-    width: auto;
-    height: 100px;
-    margin: auto;
-    display: block; }
-  #populares span.precio {
-    top: 100%;
-    left: 25%; }
-    #populares span.precio:hover {
-      font-size: 1em; }
-  #populares button {
-    left: 50%;
-    top: 140%; }
-
-  .autenticacion .elige {
-    width: 100%;
-    margin: auto; }
-  .autenticacion .signup-form, .autenticacion .login-form {
-    padding: 40px;
-    clear: both;
-    width: 100%;
-    box-sizing: border-box;
-    height: 500px;
-    margin: auto;
-    text-align: center; } }
-
-/*# sourceMappingURL=estilos.css.map */
+Backtrace:
+sass/estilos.scss:5
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/tree/import_node.rb:67:in `rescue in import'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/tree/import_node.rb:44:in `import'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/tree/import_node.rb:28:in `imported_file'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/tree/import_node.rb:37:in `css_import?'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:310:in `visit_import'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/stack.rb:79:in `block in with_base'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/stack.rb:135:in `with_frame'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/stack.rb:79:in `with_base'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:158:in `visit'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/tree/visitors/base.rb:52:in `map'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:157:in `visit'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/tree/visitors/perform.rb:10:in `visit'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/tree/root_node.rb:36:in `css_tree'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/engine.rb:307:in `render_with_sourcemap'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-3.7.3/lib/sass/plugin/compiler.rb:320:in `block in watch'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
+C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: video.\A        Load path: G:/DAW2/DIW/Proyecto/MJ_Music/sass\A         on line 5 of sass/estilos.scss\A \A 1: @import \"variables\";\A 2: \A 3: \A 4: // Index\A 5: @import \"video\";\A 6: \A 7: @import \"audio\";\A 8: \A 9: body{\A 10:     font-family: $fuente;"; }

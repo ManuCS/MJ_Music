@@ -45,7 +45,7 @@
         <div class="row" style="height: 100%;">
             <!-- Logo -->
             <div class="col-lg-4 col-md-4 col-sm-4 col-4" style="padding:0; margin:auto">
-                <a href="index.html"><img src="Images/logo.png" alt="" class="logo"></a>
+                <a href="principal.html"><img src="Images/logo.png" alt="" class="logo"></a>
             </div>
             <!-- Buscar -->
             <div class="col-lg-6 col-md-6 col-sm-6 col-4" id="divForm" style="padding:0; margin:auto">
@@ -266,7 +266,19 @@
                 <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
 
                     <!-- Social buttons -->
-                    <h5 class="font-weight-bold text-uppercase mb-4">Siguenos</h5>
+                    <h5 class="font-weight-bold text-uppercase mb-4">Bienvenida</h5>
+                    <div class="reproductor">
+                        <audio id="audio">
+                            <source src="assets/audioPagina.mp3" type="audio/mpeg" />
+                        </audio>
+                    </div>
+                    <div class="iconosAudio">
+                        <div><i class="far fa-play-circle fa-lg mr-lg-2" onClick="document.getElementById('audio').play()"></i></div>
+                        <div><i class="far fa-pause-circle fa-lg mr-lg-2" onClick="document.getElementById('audio').pause()"></i></div>
+                        <div><i class="fas fa-volume-up fa-lg mr-lg-2" onClick="document.getElementById('audio').volume+=0.1"></i></div>
+                        <div><i class="fas fa-volume-down fa-lg mr-lg-2" onClick="document.getElementById('audio').volume-=0.1"></i></div>
+                        <div><i class="fas fa-volume-off fa-lg mr-lg-2" onClick="document.getElementById('audio').volume=0"></i></div>
+                    </div>
 
                 </div>
 

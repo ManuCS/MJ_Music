@@ -1,5 +1,11 @@
 @import "variables";
 
+
+// Index
+@import "video";
+
+@import "audio";
+
 body{
     font-family: $fuente;
 }
@@ -115,5 +121,13 @@ body{
             margin:auto;
             text-align: center;
         }
+    }
+
+
+    div.iconosAudio{
+        height: 2em;
+        width: 47%;
+        margin:auto;
+        padding-left: 1em;
     }
 }

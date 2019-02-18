@@ -1,0 +1,9 @@
+div.iconosAudio{
+    svg{
+        @include reproductor;
+    }
+}
+
+div.iconosAudio{
+    margin-left: 1em;
+}

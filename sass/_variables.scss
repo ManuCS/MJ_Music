@@ -10,3 +10,18 @@ $colorBotonHov: #13b2ca;
 //Fuentes
 $fuente: 'Raleway', sans-serif;
 $fuenteNegrita: 'Raleway:700', sans-serif;
+
+
+//Mixins
+
+@mixin reproductor(){
+    position: relative;
+    cursor: pointer;
+    margin-right: 10px;
+    color: paleturquoise;
+    float:left;
+
+    &:hover{
+        filter: brightness(70%);
+    }
+}

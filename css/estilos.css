@@ -1,4 +1,53 @@
 @charset "UTF-8";
+div.reproductor-video {
+  text-align: center; }
+  div.reproductor-video #player {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    background-size: cover; }
+
+div.video a img.logo {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  margin-left: -55px; }
+
+div.iconosVideo svg {
+  position: relative;
+  cursor: pointer;
+  margin-right: 10px;
+  color: paleturquoise;
+  float: left; }
+  div.iconosVideo svg:hover {
+    filter: brightness(70%); }
+
+div.boton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  margin-top: -75px;
+  margin-left: -75px; }
+
+div.iconosAudio svg {
+  position: relative;
+  cursor: pointer;
+  margin-right: 10px;
+  color: paleturquoise;
+  float: left; }
+  div.iconosAudio svg:hover {
+    filter: brightness(70%); }
+
+div.iconosAudio {
+  margin-left: 1em; }
+
 body {
   font-family: "Raleway", sans-serif; }
 
@@ -401,6 +450,12 @@ footer li {
     box-sizing: border-box;
     height: 500px;
     margin: auto;
-    text-align: center; } }
+    text-align: center; }
+
+  div.iconosAudio {
+    height: 2em;
+    width: 47%;
+    margin: auto;
+    padding-left: 1em; } }
 
 /*# sourceMappingURL=estilos.css.map */

@@ -91,6 +91,8 @@ body {
   color: white;
   width: 30%;
   padding: 0; }
+  #user svg, #cesta svg, #chat svg {
+    color: white; }
   #user:hover, #cesta:hover, #chat:hover {
     background-color: paleturquoise; }
     #user:hover svg, #cesta:hover svg, #chat:hover svg {

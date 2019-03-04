@@ -50,6 +50,10 @@
     width: 30%;
     padding:0;
 
+    svg{
+        color: $blanco;
+    }
+
     &:hover{
         background-color: $turquesa;
         svg{

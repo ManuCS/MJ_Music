@@ -1,0 +1,16 @@
+--Accesibilidad y usabilidad---
+
+- Responsive en varios tamaños: móvil, tablet, pantalla de pc.
+- Menú intuitivo y sencillo para una mejor usabilidad.
+- Incorporación de un mapa web.
+- Colores intuitivos.
+- Formularios sencillos de rellenar.
+- Uso del atributo "alt" y "title" en imágenes.
+
+
+--SEO---
+-Buena estructura de encabezados h1, h2...
+- Contenidos dinámicos
+- Contenidos originales
+- Página accesible
+- Optimizada para mayor velocidad de la carga de la página

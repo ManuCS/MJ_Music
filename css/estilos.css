@@ -424,19 +424,19 @@ footer li {
       width: 100%;
       text-align: left; }
 
-  #populares .overlay div {
+  .populares .overlay div {
     font-size: .5em; }
-  #populares img {
+  .populares img {
     width: auto;
     height: 100px;
     margin: auto;
     display: block; }
-  #populares span.precio {
+  .populares span.precio {
     top: 100%;
     left: 25%; }
-    #populares span.precio:hover {
+    .populares span.precio:hover {
       font-size: 1em; }
-  #populares button {
+  .populares button {
     left: 50%;
     top: 140%; }
 

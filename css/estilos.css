@@ -91,11 +91,9 @@ body {
   color: white;
   width: 30%;
   padding: 0; }
-  #user a, #cesta a, #chat a {
-    color: white; }
   #user:hover, #cesta:hover, #chat:hover {
     background-color: paleturquoise; }
-    #user:hover a, #cesta:hover a, #chat:hover a {
+    #user:hover svg, #cesta:hover svg, #chat:hover svg {
       color: black; }
   #user:focus, #cesta:focus, #chat:focus {
     outline: 0px; }
@@ -158,20 +156,20 @@ nav.navbar {
   height: 400px; }
 
 /* M├üS POPULARES */
-#populares {
+.populares {
   margin: 5em auto;
   position: relative; }
-  #populares h3 {
+  .populares h3 {
     margin-bottom: 1.5em; }
-  #populares div {
+  .populares div {
     margin: auto;
     text-align: center; }
-  #populares img {
+  .populares img {
     width: auto;
     height: 200px;
     margin: auto;
     display: block; }
-  #populares .overlay {
+  .populares .overlay {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -182,10 +180,10 @@ nav.navbar {
     opacity: 0;
     transition: .5s ease;
     background-color: paleturquoise; }
-  #populares .col-4:hover .overlay {
+  .populares .col-4:hover .overlay {
     opacity: 1;
     cursor: pointer; }
-  #populares .overlay div {
+  .populares .overlay div {
     font-weight: bold;
     font-size: 1em;
     position: absolute;
@@ -196,7 +194,7 @@ nav.navbar {
     transform: translate(-50%, -50%);
     text-align: center;
     cursor: pointer; }
-  #populares .logoPop {
+  .populares .logoPop {
     position: absolute;
     top: 10%;
     left: 20%;
@@ -208,15 +206,15 @@ nav.navbar {
     -ms-transform: translate(-50%, -50%);
     padding: 12px 24px;
     text-align: center; }
-  #populares span.precio {
+  .populares span.precio {
     position: absolute;
     top: 80%;
     left: 5%;
     text-shadow: 1px 1px 1px;
     cursor: pointer; }
-    #populares span.precio:hover {
+    .populares span.precio:hover {
       font-size: 1.2em; }
-  #populares button {
+  .populares button {
     position: absolute;
     top: 90%;
     left: 85%;
@@ -229,12 +227,12 @@ nav.navbar {
     cursor: pointer;
     border-radius: 5px;
     text-align: center; }
-    #populares button:hover {
+    .populares button:hover {
       background-color: #13b2ca; }
-    #populares button a {
+    .populares button a {
       color: white;
       text-decoration: none; }
-  #populares .enlace {
+  .populares .enlace {
     font-size: .5em;
     color: black; }
 

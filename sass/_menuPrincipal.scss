@@ -50,13 +50,9 @@
     width: 30%;
     padding:0;
 
-    a{
-        color: $blanco;
-    }
-
     &:hover{
         background-color: $turquesa;
-        a{
+        svg{
             color:black;
         }
     }

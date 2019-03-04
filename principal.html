@@ -64,10 +64,9 @@
             <!-- Iconos -->
             <div class="col-lg-2 col-md-2 col-sm-2 col-4" style="padding:0">
                 <div style="height: 100%; width: 100%;">
-                    <button id="user"><a href="autenticacion.html"><i
-                                class="fas fa-user fa-lg mr-lg-2"></i></a></button>
-                    <button id="cesta"><a href="#"><i class="fas fa-shopping-cart fa-lg mr-lg-2"></i></a></button>
-                    <button id="chat"><a href="#"><i class="far fa-comments fa-lg mr-lg-2"></i></a></button>
+                    <button id="user" onclick="location.href='autenticacion.html'"><i class="fas fa-user fa-lg mr-lg-2"></i></button>
+                    <button id="cesta"><i class="fas fa-shopping-cart fa-lg mr-lg-2"></i></button>
+                    <button id="chat"><i class="far fa-comments fa-lg mr-lg-2"></i></button>
                 </div>
             </div>
         </div>
@@ -80,7 +79,7 @@
         <!-- Links -->
         <ul class="navbar-nav">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
                     Cuerda
                 </a>
                 <div class="dropdown-menu">
@@ -92,7 +91,7 @@
                 </div>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
                     Viento
                 </a>
                 <div class="dropdown-menu">
@@ -164,22 +163,22 @@
 
 
     <!-- PRODUCTOS POPULARES -->
-    <section id="populares">
+    <section class="populares">
         <h3>Productos más populares</h3>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-4">
-                    <img class="img-fluid" src="Images/populares/populares1.png" alt="Gretsch White Falcon"
-                        id="popular1">
+                    <img class="img-fluid" src="Images/populares/populares1.png" alt="Gretsch White Falcon">
                     <div class="overlay">
                         <div>Gretsch G6136T-59 White Falcon</div>
                     </div>
                     <img src="Images/marcas/gretsch.png" class="logoPop" alt="Gretsch">
                     <span class="precio">3.450€</span>
-                    <button class="btn"><a href="producto.html">Comprar</a></button>
+                    <button class="btn" onclick="location.href='producto.html'">Comprar</button>
+
                 </div>
                 <div class="col-4">
-                    <img class="img-fluid" src="Images/populares/populares2.png" alt="Yamaha GC1-M" id="popular2">
+                    <img class="img-fluid" src="Images/populares/populares2.png" alt="Yamaha GC1-M">
                     <div class="overlay">
                         <div>Yamaha GC1-M PE Grand Piano</div>
                     </div>
@@ -188,7 +187,7 @@
                     <button class="btn">Comprar</button>
                 </div>
                 <div class="col-4">
-                    <img class="img-fluid" src="Images/populares/populares3.jpg" alt="DW PDP CM6" id="popular3">
+                    <img class="img-fluid" src="Images/populares/populares3.jpg" alt="DW PDP CM6">
                     <div class="overlay">
                         <div>DW PDP CM6 Fusion Silver / Black</div>
                     </div>
@@ -202,14 +201,13 @@
     <hr style="background-color: paleturquoise;">
 
     <!-- SEGUNDA MANO -->
-    <section id="populares">
+    <section class="populares">
         <h3>Productos de segunda mano <span class="enlace">¿Quieres vender? Entra <a
                     href="FormProdUsado.html">aqui</a></span></h3>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-4">
-                    <img class="img-fluid" src="Images/populares/populares1.png" alt="Gretsch White Falcon"
-                        id="popular1">
+                    <img class="img-fluid" src="Images/populares/populares1.png" alt="Gretsch White Falcon">
                     <div class="overlay">
                         <div>Gretsch G6136T-59 White Falcon</div>
                     </div>
@@ -218,7 +216,7 @@
                     <button class="btn">Comprar</button>
                 </div>
                 <div class="col-4">
-                    <img class="img-fluid" src="Images/populares/populares2.png" alt="Yamaha GC1-M" id="popular2">
+                    <img class="img-fluid" src="Images/populares/populares2.png" alt="Yamaha GC1-M">
                     <div class="overlay">
                         <div>Yamaha GC1-M PE Grand Piano</div>
                     </div>
@@ -227,7 +225,7 @@
                     <button class="btn">Comprar</button>
                 </div>
                 <div class="col-4">
-                    <img class="img-fluid" src="Images/populares/populares3.jpg" alt="DW PDP CM6" id="popular3">
+                    <img class="img-fluid" src="Images/populares/populares3.jpg" alt="DW PDP CM6">
                     <div class="overlay">
                         <div>DW PDP CM6 Fusion Silver / Black</div>
                     </div>
@@ -240,7 +238,7 @@
     </section>
 
 
-    <!------------------------------------ Footer ---------------------------------------->
+     <!-- Footer -->
     <footer class="page-footer" style="background-color:#262626; color:white; font-family: 'Raleway', sans-serif;">
         <!-- Footer Links -->
         <div class="container text-center text-md-left">
@@ -329,11 +327,16 @@
                         </audio>
                     </div>
                     <div class="iconosAudio">
-                        <div><i class="far fa-play-circle fa-lg mr-lg-2" onClick="document.getElementById('audio').play()"></i></div>
-                        <div><i class="far fa-pause-circle fa-lg mr-lg-2" onClick="document.getElementById('audio').pause()"></i></div>
-                        <div><i class="fas fa-volume-up fa-lg mr-lg-2" onClick="document.getElementById('audio').volume+=0.1"></i></div>
-                        <div><i class="fas fa-volume-down fa-lg mr-lg-2" onClick="document.getElementById('audio').volume-=0.1"></i></div>
-                        <div><i class="fas fa-volume-off fa-lg mr-lg-2" onClick="document.getElementById('audio').volume=0"></i></div>
+                        <div><i class="far fa-play-circle fa-lg mr-lg-2"
+                                onClick="document.getElementById('audio').play()"></i></div>
+                        <div><i class="far fa-pause-circle fa-lg mr-lg-2"
+                                onClick="document.getElementById('audio').pause()"></i></div>
+                        <div><i class="fas fa-volume-up fa-lg mr-lg-2"
+                                onClick="document.getElementById('audio').volume+=0.1"></i></div>
+                        <div><i class="fas fa-volume-down fa-lg mr-lg-2"
+                                onClick="document.getElementById('audio').volume-=0.1"></i></div>
+                        <div><i class="fas fa-volume-off fa-lg mr-lg-2"
+                                onClick="document.getElementById('audio').volume=0"></i></div>
                     </div>
 
                 </div>
